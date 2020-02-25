@@ -40,7 +40,7 @@ public class ItemController {
 	@Qualifier("serviceFeign")
 	private IItemService itemService;
 	
-	@Value("${configuracion.texto}")
+	//@Value("${configuracion.texto}")
 	private String texto;
 	
 	
@@ -67,7 +67,7 @@ public class ItemController {
 		return item;
 	}
 	
-	@GetMapping("/obtener-config")
+	/*@GetMapping("/obtener-config")
 	public ResponseEntity<?> obtenerConfig(@Value("${server.port}") String puerto){
 		
 		log.info(texto);
@@ -82,7 +82,7 @@ public class ItemController {
 		}
 		
 		return new ResponseEntity<Map<String, String>>(json, HttpStatus.OK);
-	}
+	}*/
 	
 	@PostMapping("/crear")
 	@ResponseStatus(HttpStatus.CREATED)
